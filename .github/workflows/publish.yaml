@@ -21,6 +21,10 @@ jobs:
           node-version: 14
           cache: 'npm'
           registry-url: 'https://npm.pkg.github.com'
+      - run: cat /home/runner/work/_temp/.npmrc
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
