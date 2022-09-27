@@ -2,7 +2,7 @@ name: "Publish Release as NPM Package"
 on:
   push:
     branches:
-      - "master"
+      - "foobar"
   release:
     types:
       - published
